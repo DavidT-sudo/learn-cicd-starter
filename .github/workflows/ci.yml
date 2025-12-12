@@ -44,7 +44,7 @@ jobs:
         run: staticcheck ./...
 
   security:
-    name: Security
+    name: gosec
     runs-on: ubuntu-latest
 
     steps:
