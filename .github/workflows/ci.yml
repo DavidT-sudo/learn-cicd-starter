@@ -44,7 +44,7 @@ jobs:
         run: staticcheck ./...
     
     security:
-      name: security
+      name: securityA
       runs-on: ubuntu-latest
 
       steps:
