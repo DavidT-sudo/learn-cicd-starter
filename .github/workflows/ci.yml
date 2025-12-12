@@ -26,7 +26,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: format code
+      - name: Check out code
+        uses: actions/checkout@v4
+      
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.25.1"
+      
+      - name: Format code
         run: test -z $(go fmt ./...)
       
       - name: Install staticcheck
